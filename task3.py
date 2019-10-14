@@ -6,12 +6,14 @@ n = int(input())
 s = ""
 if n < 20:
 	s += r0[n-11]
+	s += " "+k[2]
 else:
 	s += r2[n//10-2]+" "+r1[n%10]
-if 1 < n % 10 < 5:
-	s +=" "+k[1]
-elif n % 10 == 1:
-	s += " "+k[0]
-else:
-	s += " "+k[2]
+if n > 19:
+    if 1 < n % 10 < 5:
+    	s +=" "+k[1]
+    elif n % 10 == 1:
+    	s += " "+k[0]
+    else:
+    	s += " "+k[2]
 print(s)
